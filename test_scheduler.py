@@ -18,7 +18,7 @@ def test_create_event(client):
 
 def test_get_events_empty(client):
     response = client.get('/events')
-    assert response.status_code == 300 # incorrect
+    assert response.status_code == 200
     assert response.get_json() == {}
 
 def test_get_single_event(client):
