@@ -12,7 +12,7 @@ def get_events():
 @app.get("/events/<string:event>")
 def get_event(event):
     if event not in events:
-        return {"error": "event with id not found"}, 400
+        return {"error": "event with id not found"}, 404
 
     return events[event]
 
