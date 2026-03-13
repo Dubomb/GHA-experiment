@@ -1,0 +1,12 @@
+name: Test
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo "Hello world"
+      - name: List
+        run: ls -la
